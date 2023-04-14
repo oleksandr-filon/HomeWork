@@ -1,0 +1,90 @@
+/* Reset */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+ul {
+list-style: none;   
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Variable */
+:root {
+     /* Fonts */
+   --main-fonts: 'Open Sans', sans-serif;
+
+    /* Colors */
+   --color-gray: #828282;
+   --color-black: #070707;
+
+
+}
+
+/* Variable end */
+
+
+
+
+
+
+/* Reset end */
+
+
+
+
+/* Global class */
+
+
+boody {
+font-family: var(--main-fonts);
+color: var(--color-black);
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* Global class end */
+
+/* Header */
+
+.header__link {
+    color: var(--color-gray);  
+}
+.header__menu {
+    border-bottom: 1px solid var(--color-gray);
+}
+
+/* Звернення до класу в середині 90% */
+.header .header__link {
+    color: var(--color-gray);
+    max-width: 480px;
+}
+/* Звернення на одному рівні  */
+.header.container {
+   color: red;
+}
+
+/* Звернення на дітей елементу ...(.row > div) - для всіх елементів дів в рове */
+.header__menu>.header__link {
+    color: red;
+}
+/* .header__menu+ .box   для першого елементу під хедер меню      вместь + буде ~ тоді до всіх після */
+
+
+.header__gam-menu:checked~.box {
+    display:none;
+}
+
+/* Header end */
+

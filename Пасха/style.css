@@ -1,0 +1,135 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
+    ul {
+    list-style: none;   
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    /* Variable */
+    :root {
+         /* Fonts */
+       --main-fonts: 'Open Sans', sans-serif;
+    
+        /* Colors */
+       --color-gray: #828282;
+       --color-black: #070707;
+    
+    
+    }
+    
+    /* Variable end */
+    
+    
+    
+    
+    
+    
+    /* Reset end */
+    
+    
+    
+    
+    /* Global class */
+    
+    
+    boody {
+    font-family: var(--main-fonts);
+    color: var(--color-black);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    
+    }
+    footer {
+        max-width: 970px;
+        margin: 0 auto;
+        padding: 0 16px
+        
+        
+    }
+    
+    .container {
+        max-width: 970px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+    /* Global class end */
+    
+    /* Header */
+    .header {
+        background-color: yellow;
+        color: green;
+    }
+    
+    .header__link {
+        color: var(--color-gray);  
+    }
+    .header__menu {
+        border-bottom: 1px solid var(--color-gray);
+        display: none;
+    }
+    
+    /* Звернення до класу в середині 90% */
+    .header .header__link {
+        color: var(--color-gray);
+        max-width: 480px;
+    }
+    /* Звернення на одному рівні  */
+    .header.container {
+       color: red;
+    }
+    
+    /* Звернення на дітей елементу ...(.row > div) - для всіх елементів дів в рове */
+    .header__menu>.header__link {
+        color: red;
+    }
+    /* .header__menu+ .box   для першого елементу під хедер меню      вместь + буде ~ тоді до всіх після */
+    
+    
+    .header__gam-menu:checked~.header__menu {
+        display:block;
+        max-height: 2000 px;
+        transition: max-height
+    }
+
+    .header__gam-menu {
+        display: none;
+    
+    }
+
+    .header__link::after {
+        content: "🍹";
+    }
+
+    .header__link:hover {
+        font-size: 18px;
+        color:red;
+    }
+
+    .box {
+        width: 50px;
+        height: 40px;
+        background-color: crimson;
+        margin: 20px;
+        transition:all .8s;
+        font-size: 16px;
+        overflow: hidden;
+    }
+
+    .box:hover {
+        border-radius: 50px;
+        width: 500px;
+        background-color: coral;
+    }
+
+   
+    
+    /* Header end */

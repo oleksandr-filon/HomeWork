@@ -1,0 +1,27 @@
+.hero {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+
+
+.box {
+width: 513px;
+height: 238px;
+margin: 16px 27px 0px 21px;
+background: #1B17E9;
+}
+
+.box2 {
+
+    width: 474px;
+    height: 32px;
+    margin: ;
+
+    background: #63E18E;
+    border: 16px solid;
+    border-radius: 0 0 0 0 ;
+}
