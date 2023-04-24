@@ -37,11 +37,46 @@
     </nav>
     <!--Кінець Навігації-->
     <div class="header__btn-container">
-        <button class="btn button--line">Sign In</button>
+        <button id="btnLogin" class="btn button--line">Sign In</button>
         <button class="btn button--main">Sign Up</button>
     </div>
 </div>
 </header>
+ <!--Кінець Header-->
+ <section class="hero">
+   <div class="container hero__container">
+    <h1 class="title hero__title">The Design Thinking superpowers</h1>
+    <img class="hero__image" src="./image/Image (1).svg"  alt="img">
+    <p class="text hero__text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+    <button class="btn">Get started</button>
+
+   </div>
+   </section>
+  <!--Модалка-->
+  <div class="modal">
+    <div class="form-login">
+        <div id="close" class="form-login__close">&#10060;</div>
+        <h2>Login</h2>
+        <input class="inp" type="text" placeholder="Login">
+        <input class="inp" type="password" placeholder="password">
+        <button class="btn">Login</button>
+    </div>
+  </div>
+
 </div>
+
+<script>
+     let btn = document.querySelector('#btnLogin')
+     let modal = document.querySelector('.modal')
+     let close = document.querySelector('.form-login__close')
+
+     btn.onclick = () => {
+       modal.classList.add('visible')
+    }
+
+    close.onclick = () => {
+       modal.classList.remove('visible')
+    }
+</script>
 </body>
 </html>

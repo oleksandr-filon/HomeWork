@@ -23,14 +23,25 @@
 
     /*Fonts font-weight:600 font size:16px line-height:20px */
     --btn-fonts: 600 16px/20px var(--main-fonts);
-    --link-fonts: 400 15px/20px var(--link-fonts);
+    --hero-text-fonts: 400 18px/28px var(--main-fonts);
+    --text-fonts: 500 16px/26px var(--main-fonts);
+    --link-fonts: 400 15px/20px var(--main-fonts);
+    --title-fonts: 700 44px/54px var(--main-fonts);
 
     --r-4:4px;
-  }
+
+    
+
+}
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
+  }
+
+  body {
+        color:var(--color-black);
+        font:var(--text-fonts);
   }
 
 /*header start*/
@@ -48,6 +59,9 @@ gap: 20px;
 
 .logo {
     width: 200px;
+}
+.title {
+font:var(--title-fonts);
 }
 
 .link {
@@ -97,6 +111,55 @@ img {
     display: block;
 }
 
+.inp {
+    display:block;
+    border: 1px solid var(--color-border);
+    padding:10px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+/*Модалка */
+.modal {
+position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+background-color: #060503b8;
+width: 100vw;
+height: 100vh;
+z-index: 9991;
+visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+
+.form-login {
+    background-color:var(--color-white);
+    width: 100%;
+    max-width: 370px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    padding: 30px;
+    border: 2px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.form-login__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+/*Модалка END */
+
 .header__nav-container {
     display: flex;
     justify-content: space-between;
@@ -109,4 +172,31 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 20px;  
+}
+
+/*hero start*/
+.hero__title {
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+.hero__text {
+    margin-bottom: 20px;
+    max-width: 500px;
+    font:var(--hero-text-fonts);
+}
+
+.hero__image {
+    max-width: 644px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    width: 53%;
+
+}
+
+.hero__container {
+    position: relative;
+    padding: 167px 10px 196px;
 }
