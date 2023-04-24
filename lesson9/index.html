@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .row {
+            display:flex;
+            /* перенос если не влазят */
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 100px;
+            /* горизонт позиц */
+            justify-content: center;
+            /* 
+            justify-content:start; сліва
+            justify-content:end; в кінці
+            justify-content:space-between;  по всій ширині
+            justify-content:space-around мж першим и останнім проміжок
+            
+           Вертикальне позиц
+            */ 
+            align-items:center ;
+        }
+        .box {
+            background-color:red ;
+            width: 100px;
+            text-align: center;
+    
+        }
+        .box:first-child {order: -5;}
+        .box:nth-child(2) {order: -2;}
+        .box:nth-child(3) {order: -3;}
+        .box:nth-child(4) {order: -4;}
+        .box:last-child {order: -1;}
+
+</style>
+
+</head>
+<body>
+    <div class="row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html>
