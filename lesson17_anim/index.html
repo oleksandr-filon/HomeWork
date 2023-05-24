@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        button {
+            width: 200px;
+            padding: 10px 10px;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,47,121,1) 65%, rgba(0,212,255,1) 100%);
+            color: #fff;
+            border:none;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: 200%;
+            transition: all 1s;
+            margin-bottom: 40px;
+        }
+
+        button:hover {
+            background-position: -290px;
+        }
+
+        .box {
+display: flex;
+align-items: center;
+justify-content: center;
+
+            width: 200px;
+            height: 300px;;
+            border-radius: 20px;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,47,121,1) 65%, rgba(0,212,255,1) 100%);
+            background-size: 100% 200%;
+            transition: all 1s;
+        }
+
+        .box:hover {
+            background-position-x: 100px;
+        
+            
+        }
+.chekbox:active {}
+
+        .box-test {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: blueviolet;
+            transition: all 1s;
+            animation: sasha-simple 1s 2s infinite;
+        }
+       @keyframes sasha-detail {
+0% {}
+50% {margin-left: 100px;}
+100% {}
+       }
+
+       @keyframes sasha-simple {
+from {margin-left:0}
+to {margin-left:100px}
+       }
+
+
+        /*.box__content {
+            border-radius: 18px;
+            background-color: 20px;
+            background-color: black;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+        }*/
+    </style>
+</head>
+<body>
+    
+    <div class="section">
+    
+        
+    <div class="box-test"></div>
+
+    </div>
+</body>
+</html>
