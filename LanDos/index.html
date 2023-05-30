@@ -13,14 +13,16 @@
 <body>
 
 <div class="wrapper">
+     <!--START Header-->
  <header class="header">
- <div class="container header__row">
-    <a class="header__logo" href="/">
-        <img class="logo" src="/LanDos/image_land/logo.png" alt="logo">
-    </a>
-    <!--Навігація-->
+ <div class="container header__container">
+    
+    <div class="header-row">
+        <a class="header__logo" href="/">
+            <img class="logo" src="/LanDos/image_land/logo.png" alt="logo">
+        </a>
     <nav class="header__nav">
-        <ul class="header__nav-container">
+        <ul class="header__nav-link">
             <li class="header__nav-item">
              <a class="link" href="">Home</a>
         </li>
@@ -35,14 +37,45 @@
             </li>
         </ul>
     </nav>
-                 <!--Кінець Навігації-->
-        <div class="header__btn-container">
-            <button id="btnLogin" class="btn button--line">Login</button>
-            <button class="btn button--main">Register</button>
+         <div class="header__btn">      
+        <button id="btnLogin" class="btn button--line">Login</button>
+        <button class="btn button--main">Register</button>
+    </div>  
         </div>
-            </header>
-             <!--Кінець Header-->
+    </div>
+
+             
 </header>
+<!--Header END -->
+
+<!--MODALKA START-->
+<div class="modal">
+    <div class="form-login">
+        <div id="close" class="form-login__close">&#10060;</div>
+        <h2>Login</h2>
+        <input class="inp" type="text" placeholder="Login">
+        <input class="inp" type="password" placeholder="password">
+        <button class="btn">Login</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+     let btn = document.querySelector('#btnLogin')
+     let modal = document.querySelector('.modal')
+     let close = document.querySelector('.form-login__close')
+
+     btn.onclick = () => {
+       modal.classList.add('visible')
+    }
+
+    close.onclick = () => {
+       modal.classList.remove('visible')
+    }
+</script>
+
+
 <!--hero start-->
 <section class="hero">
     <div class="container hero__container">
@@ -97,16 +130,16 @@
 
 <div class="card-row">
 <div class="card">
-<img class="card__img" src="./image_land/Raja ampat.png" alt="">
+<img class="card__img" src="./image_land/Raja ampat.png" alt="https://chat.openai.com/">
 </div>
 <div class="card">
-    <img src="./image_land/Fanjingshan.png" alt="">
+    <img class="card__img" src="./image_land/Fanjingshan.png" alt="">
     </div>
     <div class="card">
-        <img src="./image_land/Vevey.png" alt="">
+        <img class="card__img" src="./image_land/Vevey.png" alt="">
         </div>
         <div class="card">
-            <img src="./image_land/Skadar.png" alt="">
+            <img class="card__img" src="./image_land/Skadar.png" alt="">
             </div>
 
 </div>
@@ -150,21 +183,144 @@
 
 <!--testimonials end-->
 
+<!--trending start-->
 <section class="trending">
 <div class="container trending__container">
-<div class="trending__text">
-<h2 class="trending__title">Featured destinations </h2>
+<div class="trending__text-row">
+<h2 class="trending__title">Trending stories</h2>
 <button class="btn trending-btn">View all ></button>
+</div>
+
+<div class="trending__card-row">
+
+  <div class="cards">
+    <div class="cards__img-box">
+<img class="cards__image" src="./image_land/image1.png" alt="">
+</div>
+<div class="cards__text">
+<h3 class="cards-text__title">The many benefits of  
+    taking a healing holiday</h3>
+<p class="cards-text__text">‘Helaing holidays’ are on the rise 
+    tohelp maximise your health and happines...</p>
+    <a class="cards-text__link" href="http://">Read more</a>
+</div>
+</div>
+
+<div class="cards">
+    <div class="cards__img-box">
+    <img class="cards__image" src="/LanDos/image_land/image2.png" alt="">
+</div>
+    <div class="cards__text">
+    <h3 class="cards-text__title">The many benefits of  
+        taking a healing holiday</h3>
+    <p class="cards-text__text">‘Helaing holidays’ are on the rise 
+        tohelp maximise your health and happines...</p>
+        <a class="cards-text__link" href="http://">Read more</a>
+    </div>
+</div>
+
+<div class="cards">
+    <div class="cards__img-box">
+        <img class="cards__image" src="./image_land/image3.png" alt="">
+    </div>
+        <div class="cards-text">
+        <h3 class="cards-text__title">The many benefits of  
+            taking a healing holiday</h3>
+        <p class="cards-text__text">‘Helaing holidays’ are on the rise 
+            tohelp maximise your health and happines...</p>
+            <a class="cards-text__link" href="http://">Read more</a>
+        </div>
+        </div>
+
+<div class="cards">
+    <div class="cards__img-box">
+            <img class="cards__image" src="/LanDos/image_land/image4.png" alt="">
+        </div>
+            <div class="cards-text">
+            <h3 class="cards-text__title">The many benefits of  
+                taking a healing holiday</h3>
+            <p class="cards-text__text">‘Helaing holidays’ are on the rise 
+                tohelp maximise your health and happines...</p>
+                <a class="cards-text__link" href="http://">Read more</a>
+            </div>
+            </div>
+
+
 </div>
 </div>
 </section>
+<!--trending END-->
 
-<section class="test">
-    <div class="container test__container">
-<h2>Tratatata</h2>
-<button class="bnt test-btn">bugaga</button>
+<!--FOOTER start-->
+<section class="footer">
+    <div class="cotnainer footer__container">
 
-    </div>
+        <div class="footer__box">
+    <a class="footer__logo" href="/">
+        <img class="logo" src="/LanDos/image_land/logo.png" alt="logo">
+    </a>
+    <p class="footer__box-text t1">Plan and book your perfect trip with 
+        expert advice, travel tips destination
+        information from us
+    </p>
+    <p class="footer__box-text">©2020 Thousand Sunny. All rights reserved</p>
+</div>
+<div class="footer__box">
+    <ul>
+        <li class="footer__box__li main-li">Destinations</li>
+        <li class="footer__box__li">Africa</li>
+        <li class="footer__box__li">Antarctica</li>
+        <li class="footer__box__li"> Asia</li>
+        <li class="footer__box__li">Europe</li>
+        <li class="footer__box__li">America</li>
+    </ul>
+</div>
+
+<div class="footer__box">
+    
+    <ul>
+        <li class="footer__box__li main-li">Shop</li>
+        <li class="footer__box__li">Destinations Guides</li>
+        <li class="footer__box__li">Pictorial & Gifts</li>
+        <li class="footer__box__li">Special Offers</li>
+        <li class="footer__box__li">Delivery Times</li>
+        <li class="footer__box__li">FAQs</li>
+    </ul>
+</div>
+
+
+<div class="footer__box">
+    <ul>
+        <li class="footer__box__li main-li">Interests</li>
+        <li class="footer__box__li">Adventure Travel</li>
+        <li class="footer__box__li">Art And Culture</li>
+        <li class="footer__box__li">Wildlife And Nature</li>
+        <li class="footer__box__li">Family Holidayss</li>
+        <li class="footer__box__li">Food And Drink</li>
+    </ul>
+</div>
+
+</div>
+<hr class="footer__line">
+
+<div class="footer__icon-row">
+    <a href="">
+        <img class="icon-row__item1" src="./image_land/icon1.png" alt="/">
+    </a>
+    <a href="">
+        <img class="icon-row__item2" src="./image_land/icon2.png" alt="/">
+        </a>
+    <a href="">
+        <img class="icon-row__item3" src="./image_land/icon3.png" alt="/">
+    </a>
+    <a href="">
+        <img class="icon-row__item1" src="./image_land/icon4.png" alt="/">
+    </a>
+    <a href="">
+        <img class="icon-row__item1" src="./image_land/icon5.png" alt="/">
+    </a>
+
+</div>
 </section>
 
 </div>
