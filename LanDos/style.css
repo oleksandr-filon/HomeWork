@@ -108,7 +108,7 @@ font: var(--link-fonts);
 }
 .btn {
 font:var(--btn-fonts) ;
-color:white;
+color:var(--color-background);
 display:flex;
 justify-content: center;
 align-items: center; 
@@ -170,6 +170,10 @@ padding-top:20px;
   padding-left:14px;
   display:flex;
   gap:18px;
+}
+.button--line:hover{
+  background-color: var(--color-orange);
+  color:var(--color-background);
 }
 
 .button--line {
@@ -315,7 +319,7 @@ padding-bottom: 33px;
 
 /*featured start*/
 .featured__container {
-  padding-top: 292px;
+  margin-top: 292px;
   margin-right: 240px;
   margin-left: 240px;
 }
@@ -330,6 +334,13 @@ justify-content: space-between;
   color:var(--color-orange);
   justify-content: flex-end;
   font: var(--but-view-fonts);
+}
+
+.featured-btn:hover {
+  transform: scale(1.05);
+  background-color:var(--color-background);
+  border: none;
+  color: var(--color-orange);
 }
 
 .card-row {
@@ -357,13 +368,15 @@ justify-content: space-between;
 /*guides start*/
 
 .guides__container {
-  padding-top: 384px;
-  margin-right: 240px;
-  margin-left: 240px;
-  position: relative;
-  padding-bottom: 341px;
+    padding-top: 384px;
+    margin-right: 240px;
+    margin-left: 240px;
+    position: relative;
+    margin-bottom: 341px;
+    
+  }
   
-}
+  
 .guides__title {
  width: 400px;
  font: var(--h2-fonts);
@@ -373,7 +386,7 @@ justify-content: space-between;
 
 .guides__text {
 font: var(--p-fonts);
-color: gray;
+color: var(--color-grey);
 width: 450px;
 padding-bottom: 33px;
 }
@@ -456,6 +469,9 @@ top: 100px;
   }
   .trending-btn:hover {
     transform: scale(1.05);
+    background-color:var(--color-background);
+    border: none;
+    color: var(--color-orange);
   }
 
 .trending__card-row {
@@ -574,4 +590,35 @@ padding-bottom: 33px;
 }
 .icon-row__item5 {
   width: 28px;
+}
+/*Footer END */
+
+@media (max-width:1277px) {
+  .testimonials__image{
+    position: static;}
+    .testimonials__title{
+      padding-bottom: 50px;
+    }
+    .explore__container{
+      margin-top: 100px;
+    }
+    .featured__container {
+      margin-top: 100px;
+    }
+    .guides__container {
+      padding-top: 100px;
+      margin-bottom: 100px;
+    }
+    .guides__img {
+      position: static;
+    }
+    .testimonials__container{
+      margin-bottom: 150px;
+    }
+    .trending__container {
+      margin-bottom: 150px;
+    }
+    .footer__box__li{
+   padding-bottom: 15px;
+    }
 }
