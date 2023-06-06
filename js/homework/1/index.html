@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Task 01</h2>
+    <p>Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;</p>
+
+    <input class="inp1" type="text" placeholder="Name">
+    <button class="btn1">Login</button>
+    <span class="out1"></span>
+
+    <hr>
+    <h2>Task 02</h2>
+    <p>Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як
+        константу;</p>
+
+    <input class="inp2" type="number" placeholder="Age">
+    <button class="btn2">Login</button>
+    <span class="out2"></span>
+
+    <hr>
+    <h2>Task 03</h2>
+    <p>Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в
+        константі.</p>
+    <h4>1 USD = 0,93 EUR</h4>
+    <input class="inp3" type="number" placeholder="USD">
+    <button class="btn3">Result</button>
+    <span class="out3"></span>
+
+    <hr>
+    <h2>Task 04</h2>
+    <p>Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата</p>
+    <input class="inp4" type="number" placeholder="довжина сторони ">
+    <button class="btn4">Result</button>
+    <span class="out4"></span>
+
+    <hr>
+    <h2>Task 05</h2>
+    <p>Запитай у користувача радіус кола і виведи площу такої окружності.</p>
+    <input class="inp5" type="number" placeholder="r">
+    <button class="btn5">Result</button>
+    <span class="out5"></span>
+
+    <hr>
+    <h2>Task 06</h2>
+    <p>Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість,
+         з якою необхідно рухатися, щоб встигнути вчасно</p>
+    <input class="inp6" type="number" placeholder="км">
+    <input class="inp61" type="number"placeholder="годин">
+    <span class="out6"></span>
+    <button class="btn6">Result</button>
+     
+    <hr>
+    <h2>Task 07</h2>
+    <p>Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.</p>
+    <input class="inp7" type="number" placeholder="Гб">
+    <span class="out7"></span>
+    <button class="btn7">Result</button>
+
+    
+
+
+    <script>
+        let inp1 = document.querySelector('.inp1') ;
+        let btn1 = document.querySelector('.btn1') ;
+        let out1 = document.querySelector('.out1') ;
+
+        btn1.onclick = () => {
+         out1.innerHTML = "Привіт, " + inp1.value
+        }
+
+        let inp2 = document.querySelector('.inp2') ;
+        let btn2 = document.querySelector('.btn2') ;
+        let out2 = document.querySelector('.out2') ;
+
+        btn2.onclick = () => {
+         out2.innerHTML = 2023 - +inp2.value
+        }
+        
+        let inp3 = document.querySelector('.inp3') ;
+        let btn3 = document.querySelector('.btn3') ;
+        let out3 = document.querySelector('.out3') ;
+
+        btn3.onclick = () => {
+         out3.innerHTML = +inp3.value * 0.93 + " EUR"
+        }
+        
+        
+        let inp4 = document.querySelector('.inp4') ;
+        let btn4 = document.querySelector('.btn4') ;
+        let out4 = document.querySelector('.out4') ;
+
+        btn4.onclick = () => {
+         out4.innerHTML ="P = " +inp4.value * 4
+        }
+
+        let inp5 = document.querySelector('.inp5') ;
+        let btn5 = document.querySelector('.btn5') ;
+        let out5 = document.querySelector('.out5') ;
+
+        btn5.onclick = () => {
+         out5.innerHTML = "S = " +inp5.value * +inp5.value * 3.14
+        }
+        
+        let inp6 = document.querySelector('.inp6') ;
+        let inp61 = document.querySelector('.inp61') ;
+        let btn6 = document.querySelector('.btn6') ;
+        let out6 = document.querySelector('.out6') ;
+
+        btn6.onclick = () => {
+        out6.innerHTML = +inp6.value / +inp61.value + "км/год";
+        }
+
+        let inp7 = document.querySelector('.inp7') ;
+        let btn7 = document.querySelector('.btn7') ;
+        let out7 = document.querySelector('.out7') ;
+
+        btn7.onclick = () => {
+         out7.innerHTML = inp7.value * 1024 / 800 +" files"
+        }
+    </script>
+
+</body>
+
+</html>

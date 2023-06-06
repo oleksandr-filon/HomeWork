@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 button {
   border: 0;
   background: transparent;
@@ -10,15 +11,19 @@ button {
   display: block;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
+
 img {
   display: block;
 }
+
 body {
   background-color: var(--color-background)
 }
@@ -102,6 +107,7 @@ p {
 color:var(--color-nav-gray);
 font: var(--link-fonts);
 }
+
 .link:hover {
   color: var(--color-black);
 
@@ -148,6 +154,7 @@ color: var(--color-orange);
   background-color: var(--color-background) ;
   z-index: 100;
 }
+
 .header__container {
   margin: 0px 190px 125px 190px;
   position: relative;
@@ -166,6 +173,7 @@ padding-top:20px;
   display:flex;
   gap:34px;
 }
+
 /*GAMBURG start */
 .header__gamb{
   position: relative;
@@ -187,6 +195,7 @@ padding-top:20px;
 .header__gamb-line--top{
 top:10px;
 }
+
 .header__gamb-line--bottom {
   top:30px
   }
@@ -196,15 +205,18 @@ top:10px;
     display: none;
     max-width: 300px;
   }
+
   .header__gam-menu {
     opacity: 0;
 }
+
 .header__gam-menu:checked~.header__menu {
   display: block;
   background-color: var(--color-footer);
   margin-top: 50px;
   width: 200px;
 }
+
 /*GAMBURG end */
 .header__link {
   color:var(--color-black);
@@ -220,6 +232,7 @@ top:10px;
   display:flex;
   gap:18px;
 }
+
 .button--line:hover{
   background-color: var(--color-orange);
   color:var(--color-background);
@@ -230,9 +243,11 @@ background-color:var(--color-background);
 border: 2px solid var(--color-orange);
 color: var(--color-orange);
 }
+
 .logo {
   width: 41px;
 }
+
 .header__logo {
 position: absolute;  
 left: 0;
