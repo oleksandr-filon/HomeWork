@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    * {
-        box-sizing: border-box;
-    }
-    .cart {
-        background-color: rgb(225, 230, 242);
-        border: 2px solid black;
-        display: grid;
-        margin-right: 200px;
-        justify-content: center;
-        align-items: center;
-       
-       }
-    .out {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       margin: 50px;
-       }
-    .price {
-        color: darkred;
-    }   
+        * {
+            box-sizing: border-box;
+        }
 
-    .showAll {
-        margin-left: 100px;
-        margin-top: 40px;
-    }
-    .buy {
-      width: 100px;
-      height: 30px;
-      margin-bottom: 10px;
-    }
+        .cart {
+            background-color: rgb(225, 230, 242);
+            border: 2px solid black;
+            display: grid;
+            margin-right: 200px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .out {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 50px;
+        }
+
+        .price {
+            color: darkred;
+        }
+
+        .showAll {
+            margin-left: 100px;
+            margin-top: 40px;
+        }
+
+        .buy {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <h1>Watches</h1>
-        <button class="showAll">Show All</button>
+        <button class="showAll">Show Alls</button>
         <button class="showbuy">Show buy</button>
         <span class="cart__container">0</span>
         <span class="cart__buy"></span>
-        
-    <div class="out">
-        
+
+        <div class="out">
+
+        </div>
     </div>
-</div>
 
     <script>
-let shopItem = [
-{
+        let shopItem = [
+            {
                 name: "Tissot1",
                 image: 'https://tissot.ua/media/catalog/product/cache/1/thumbnail/570x570/9df78eab33525d08d6e5fb8d27136e95/t/1/t137.410.16.041.00.jpg',
                 price: 1000 + "$"
             },
-   {
+            {
                 name: "Tissot2",
                 image: 'https://tissot.ua/media/catalog/product/cache/1/thumbnail/570x570/9df78eab33525d08d6e5fb8d27136e95/t/9/t927.407.46.051.00.jpg',
                 price: 2000 + "$"
- },
+            },
             {
                 name: "Tissot3",
-                image: 'https://tissot.ua/media/catalog/product/cache/1/thumbnail/570x570/9df78eab33525d08d6e5fb8d27136e95/t/9/t926.410.76.061.00.jpg' ,
+                image: 'https://tissot.ua/media/catalog/product/cache/1/thumbnail/570x570/9df78eab33525d08d6e5fb8d27136e95/t/9/t926.410.76.061.00.jpg',
                 price: 3000 + "$"
             }
-]
-let out = document.querySelector('.out')
-let btn = document.querySelector('.showAll')
-let cartcontainer = document.querySelector('.cart__container')
-let showbuy = document.querySelector('.showbuy')
-let cartbuy = document.querySelector('.cart__buy')
+        ]
+        let out = document.querySelector('.out')
+        let btn = document.querySelector('.showAll')
+        let cartcontainer = document.querySelector('.cart__container')
+        let showbuy = document.querySelector('.showbuy')
+        let cartbuy = document.querySelector('.cart__buy')
 
-const addwatch = []
-const addwatchbuy = []
+        const addwatch = []
+        const addwatchbuy = []
 
-function createCart (item) {
-    let a = document.createElement('div')
-    a.classList.add('cart')
+        function createCart(item) {
+            let a = document.createElement('div')
+            a.classList.add('cart')
 
-    let b = document.createElement('h2')
-    b.innerHTML = item.name
+            let b = document.createElement('h2')
+            b.innerHTML = item.name
 
-    let c = document.createElement('img')
-    c.src=item.image;
-    c.width = 200;
-    
-    let d =document.createElement('h2')
-    d.classList.add('price')
-    d.innerHTML = item.price
+            let c = document.createElement('img')
+            c.src = item.image;
+            c.width = 200;
 
-    let buy=document.createElement('button')
-    buy.classList.add('buy')
-    buy.innerHTML="Buy"
-    
-    buy.addEventListener('click',() => {
-        addwatch.push(item)
-        console.log(addwatch) 
-        cartcontainer.innerHTML="🛒 " + addwatch.length
+            let d = document.createElement('h2')
+            d.classList.add('price')
+            d.innerHTML = item.price
 
-    },{'once':true})
+            let buy = document.createElement('button')
+            buy.classList.add('buy')
+            buy.innerHTML = "Buy"
 
-    showbuy.addEventListener('click',() => {
-        
-        cartbuy.innerHTML= item.name
+            buy.addEventListener('click', () => {
+                addwatch.push(item)
+                console.log(addwatch)
+                cartcontainer.innerHTML = "🛒 " + addwatch.length
 
+            }, { 'once': true })
 
-    },{})
+            showbuy.addEventListener('click', () => {
 
- 
-    
- 
-    a.append(b,c,d,buy)
-    return a
-}
-
-//out.append(createCart(shopItem[1]))
+                cartbuy.innerHTML = item.name
 
 
-btn.addEventListener('click',() => {
- out.innerHTML=""
- shopItem.map(item => {
-  out.append(createCart(item))
-})
-})
+            }, {})
+
+
+
+
+            a.append(b, c, d, buy)
+            return a
+        }
+
+        //out.append(createCart(shopItem[1]))
+
+
+        btn.addEventListener('click', () => {
+            out.innerHTML = ""
+            shopItem.map(item => {
+                out.append(createCart(item))
+            })
+        })
 
     </script>
 </body>
+
 </html>
